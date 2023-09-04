@@ -8,6 +8,6 @@ const generateToken = (payload) => jwt.sign(payload, secret, jwtConfig);
 const getPayload = (token) => jwt.verify(token, secret);
 
 module.exports = {
-    generateToken,
-    getPayload,
+  generateToken,
+  getPayload,
 };
