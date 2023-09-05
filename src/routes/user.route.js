@@ -8,7 +8,11 @@ const {
     passwordValidation,
 } = require('../middleware/userValidation');
 
+const tokenValidation = require('../middleware/JWTValidation');
+
 const route = express.Router();
+
+route.get('/', tokenValidation, UserController.getUsers);
 
 route.post(
     '/',
