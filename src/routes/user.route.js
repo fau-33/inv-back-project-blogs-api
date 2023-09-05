@@ -14,6 +14,8 @@ const route = express.Router();
 
 route.get('/', tokenValidation, UserController.getUsers);
 
+route.get('/:id', tokenValidation, UserController.getByUserId);
+
 route.post(
     '/',
     displayNameValidation,
